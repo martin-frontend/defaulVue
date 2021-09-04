@@ -2,11 +2,8 @@
 // import { getLanguage } from '@/lang/index'
 
 const state = {
-  // sidebar: {
-  //   opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
-  //   withoutAnimation: false
-  // },
-  // device: 'desktop',
+  sidebar: 123,
+  device: 'desktop',
   // language: getLanguage(),
   // size: Cookies.get('size') || 'medium'
 }

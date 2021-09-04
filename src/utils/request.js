@@ -1,6 +1,6 @@
 import axios from 'axios'
 // import { MessageBox, Message } from 'element-ui'
-import store from '@/store'
+// import store from '@/store'
 // import { getToken } from '@/utils/auth'
 
 // create an axios instance
@@ -38,11 +38,11 @@ service.interceptors.response.use(
   response => {
     // if the custom status is not 20000, it is judged as an error.
     if (response.status !== 201 && response.status !== 200) {
-      Message({
-        message: response.message || 'Error',
-        type: 'error',
-        duration: 5 * 1000
-      })
+      // Message({
+      //   message: response.message || 'Error',
+      //   type: 'error',
+      //   duration: 5 * 1000
+      // })
 
       // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
       if (response.status === 50008 || response.status === 50012 || response.status === 50014) {
@@ -64,11 +64,11 @@ service.interceptors.response.use(
   },
   error => {
     console.log('err' + error) // for debug
-    Message({
-      message: error.message,
-      type: 'error',
-      duration: 5 * 1000
-    })
+    // Message({
+    //   message: error.message,
+    //   type: 'error',
+    //   duration: 5 * 1000
+    // })
     return Promise.reject(error)
   }
 )

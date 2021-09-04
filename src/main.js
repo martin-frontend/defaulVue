@@ -3,7 +3,10 @@ import App from './App.vue'
 import router from './router'
 
 import '@/styles/index.scss'
-// import store from './store'
+import store from './store'
 // import './permission' // permission control
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.use(store)
+app.mount('#app')
